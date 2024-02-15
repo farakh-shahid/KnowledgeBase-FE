@@ -1,0 +1,26 @@
+.loader {
+  width: 100%;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.no__data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.tab__Bar {
+  margin: 10px 20px;
+  width: 80px;
+  height: 30px;
+}
+.button__Group {
+  display: flex;
+  border-bottom: 1px solid rgb(242, 242, 242);
+  height: 60px;
+  margin-left: 1vw;
+  margin-right: 3vw;
+}

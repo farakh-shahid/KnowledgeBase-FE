@@ -1,0 +1,28 @@
+@use "../assets/colors/colors.scss" as colors;
+@import "../../node_modules/include-media";
+
+.container {
+  padding: 3vh 0 1vh 0;
+}
+.heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 2vh;
+  line-height: 22px;
+  cursor: pointer;
+  margin-top: 1vh;
+}
+.see__list {
+  color: colors.$Java;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}

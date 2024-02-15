@@ -1,0 +1,34 @@
+@use "../assets/colors/colors.scss" as colors;
+
+.menu__container {
+  padding: 8px;
+  border-radius: 10px;
+  background-color: colors.$white;
+  position: fixed;
+  top: 45px;
+  width: 130px;
+  right: 8px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.2);
+  z-index: 10000;
+}
+
+.list__item__conatiner {
+  display: flex;
+  align-items: center;
+}
+
+.list__item {
+  padding: 1vh 1vw 1vh 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 5vw;
+  text-align: left;
+}
+
+.list__item__conatiner:hover {
+  background: colors.$hover;
+  color: colors.$Java;
+  cursor: pointer;
+}
+.icon{
+  padding-left: 1vw;
+}

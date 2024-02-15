@@ -1,0 +1,30 @@
+@import '../../node_modules/include-media';
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: wrap;
+  line-height: 24px;
+  padding-top: 1vh;
+}
+.description__conatiner {
+  overflow: hidden;
+  cursor: pointer;
+  @include media('>=phone', '<=tablet') {
+    display: none;
+  }
+}
+.loader {
+  width: 90%;
+  height: 20px;
+  margin-bottom: 1vh;
+}
+
+.cardImage {
+  display: none;
+}

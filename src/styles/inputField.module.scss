@@ -1,0 +1,32 @@
+@use '../assets/colors/colors.scss' as colors;
+.field {
+  border-radius: 7px;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid colors.$border;
+  background-color: colors.$white;
+  color: colors.$black;
+}
+.field:focus {
+  outline: none;
+}
+
+.input__search {
+  border-radius: 12rem;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid colors.$border;
+  background-color: colors.$white;
+  color: colors.$black;
+  height: 2.3rem;
+}
+.input__search:focus {
+  outline: none;
+}
+
+.input__search::-webkit-search-cancel-button {
+  cursor: pointer;
+}

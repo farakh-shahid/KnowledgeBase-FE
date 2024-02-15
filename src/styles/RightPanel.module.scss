@@ -1,0 +1,10 @@
+@import "../../node_modules/include-media";
+
+.container {
+  height: 100%;
+  width: 60%;
+  margin-left: 1vw;
+  @include media(">=tablet", "<=desktop") {
+    width: 90%;
+  }
+}

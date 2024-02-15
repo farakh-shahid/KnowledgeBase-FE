@@ -1,0 +1,15 @@
+.categories__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1vw;
+}
+.label {
+  font-size: 1.1rem;
+  margin-bottom: 1vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 30px;
+}

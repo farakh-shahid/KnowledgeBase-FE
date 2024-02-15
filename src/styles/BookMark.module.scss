@@ -1,0 +1,23 @@
+.bookmark__outlined::before {
+  content: "\f02e";
+  font-family: "Font Awesome 6 free";
+  font: var(--fa-font-regular);
+  font-weight: 400;
+  font-size: x-large;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.bookmark__outlined:hover {
+  opacity: 1;
+}
+.bookmark__contained::before {
+  content: "\f02e";
+  font-family: "Font Awesome 6 free";
+  font: var(--fa-font-regular);
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.bookmark__contained:hover {
+  opacity: 0.8;
+}

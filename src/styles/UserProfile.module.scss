@@ -1,0 +1,172 @@
+@use '../assets/colors/colors.scss' as colors;
+@import '../../node_modules/include-media';
+
+.main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.user__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  top: 2px;
+  @include media('>=phone', '<=tablet') {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.profile__picture {
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+}
+.picture {
+  border: 3px solid colors.$Java;
+  border-radius: 50px;
+  margin-top: 5px;
+}
+
+.profile__picture:hover {
+  transform: scale(1.1);
+}
+
+.username {
+  font-family: 'Lucida Console', 'Courier New', monospace;
+  color: rgb(93 97 136);
+  font-weight: 900;
+  margin-top: 2rem;
+}
+
+.slogan {
+  text-align: center;
+  font-family: 'Lucida Console', 'Courier New', monospace;
+}
+
+.bio {
+  text-align: center;
+  margin-top: 1rem;
+  color: rgb(68, 65, 65);
+  line-height: 1.6;
+  word-spacing: 5px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menu__list {
+  margin-top: 3rem;
+  width: 30%;
+  height: 50px;
+  background-color: #ffff;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 25rem;
+}
+
+.home__link:hover {
+  color: rgb(176, 21, 21);
+}
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.rectange__card {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-top: 2rem;
+  width: 1100px;
+
+  @include media('>=phone', '<=tablet') {
+    width: 100%;
+  }
+}
+
+.asked:hover {
+  color: rgb(182, 2, 2);
+}
+
+.askedRed {
+  color: rgb(182, 2, 2);
+}
+
+.profileRed {
+  color: rgb(182, 2, 2);
+}
+.editIcon {
+  text-align: right;
+  position: absolute;
+  margin-right: 15rem;
+  margin-left: 66rem;
+  margin-top: -11rem;
+  cursor: pointer;
+}
+.answeredRed {
+  color: rgb(182, 2, 2);
+}
+
+.icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  color: lightgray;
+}
+.icon:hover {
+  color: black;
+}
+
+.editIcon {
+  @include media('>=phone', '<=tablet') {
+    margin-left: 28rem;
+    margin-top: -14rem;
+  }
+}
+
+.menu__list {
+  @include media('>=phone', '<=tablet') {
+    width: 44%;
+    margin-left: 10rem;
+  }
+}
+
+.parent {
+  @include media('>=phone', '<=tablet') {
+    width: 100%;
+  }
+}
+
+.parent {
+  position: relative;
+  width: 1100px;
+  background-color: #ffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 2rem 8rem 4rem 8rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  border-radius: 10px;
+  @include media('>=phone', '<=tablet') {
+    width: 100%;
+  }
+}
+.child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

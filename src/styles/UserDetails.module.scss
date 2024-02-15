@@ -1,0 +1,13 @@
+@import "../../node_modules/include-media";
+
+.user__detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 1vh;
+  @include media(">=360px", "<=420px") {
+    text-overflow: hidden;
+    font-size: 14px;
+  }
+}

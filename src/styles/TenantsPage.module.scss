@@ -1,0 +1,329 @@
+@use '../assets/colors/colors.scss' as colors;
+@import '../../node_modules/include-media';
+
+.main {
+  margin-top: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.table {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 4rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.parent__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sub__Section {
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: colors.$white;
+  border-radius: 8px;
+  height: 100%;
+  width: 80%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+  position: relative;
+  background-color: colors.$white;
+  margin: 13% auto;
+  padding: 50px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: -4px;
+  right: 8px;
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+}
+
+.button {
+  margin-top: 1rem;
+}
+.main__subdomain {
+  display: flex;
+  flex-direction: row;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  border-radius: 25px;
+  background-color: #083a54;
+  color: colors.$white;
+  margin-left: 0.3rem;
+}
+.subdomain__chip {
+  margin-top: 0.4rem;
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 25px;
+  background-color: #083a54;
+  color: colors.$white;
+  text-align: center;
+  margin-left: 0.1rem;
+}
+
+.closebtn {
+  padding-left: 10px;
+  color: colors.$white;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+.closebtn:hover {
+  color: #eee;
+}
+
+.form__group {
+  margin-top: 1rem;
+}
+
+.sub__heading {
+  text-align: center;
+  color: #717f8a;
+}
+
+.table__group {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 3rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.edit_delete_icons {
+  display: flex;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  gap: 2.5rem;
+  margin-left: 2rem;
+  @include media('>=phone', '<tablet') {
+    justify-content: center;
+  }
+  @include media('<=phone') {
+    justify-content: center;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.delete_icon {
+  color: #e74c3c;
+}
+.delete_icon:hover {
+  color: red;
+}
+
+.edit__icon {
+  color: #aaaaaa;
+}
+
+.edit__icon :hover {
+  color: #000;
+}
+
+.heading__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.25rem;
+  background-color: colors.$Java;
+  border-radius: 10px;
+  color: white;
+  @include media('>=phone', '<tablet') {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.datePicker {
+  @include media('>=phone', '<tablet') {
+    display: none;
+  }
+}
+
+.Table__inputFields {
+  margin-left: -0.09rem;
+
+  @include media('>=phone', '<tablet') {
+    display: none;
+  }
+}
+
+.datePicker:focus {
+  outline: none !important;
+}
+.clear__button {
+  float: right;
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+}
+.clear__button:hover {
+  color: #000 !important;
+}
+
+.dialog__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.dialog__content {
+  margin-bottom: 16px;
+}
+
+.dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialog__actions button {
+  margin-left: 8px;
+}
+
+.body {
+  overflow: hidden;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  background: #ffffff;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.tooltip {
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 90px;
+  background-color: colors.$lightGrey;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent colors.$lightGrey;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.headerCell {
+  background-color: colors.$lightGrey !important;
+}
+
+.Table__createdAt {
+  margin-left: 2rem;
+  @include media('>=phone', '<tablet') {
+    margin-left: 0;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  color: colors.$white;
+  gap: 3px;
+}
+
+.faWarning {
+  width: 50px;
+  height: 50px;
+}
+
+.modalBody__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.modal__container {
+  top: 30%;
+}

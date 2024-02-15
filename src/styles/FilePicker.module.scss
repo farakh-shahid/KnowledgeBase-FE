@@ -1,0 +1,31 @@
+@use "../assets/colors/colors.scss" as colors;
+@import "../../node_modules/include-media";
+
+.choose__image {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.choose__image__wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid colors.$grey;
+  padding: 8px;
+  min-height: 40px;
+  border-radius: 10px;
+  background-color: colors.$border;
+  cursor: pointer;
+  @include media(">=phone", "<=tablet") {
+    min-height: 35px;
+    padding: 4px;
+  }
+}
+.choose__image__wrap:hover {
+  background-color: colors.$hover;
+}
+.label {
+  cursor: pointer;
+}

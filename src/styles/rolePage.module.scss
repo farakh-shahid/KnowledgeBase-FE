@@ -1,0 +1,334 @@
+@use '../assets/colors/colors.scss' as colors;
+@import '../../node_modules/include-media';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 100px;
+  padding: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 8px 0px;
+  margin-bottom: 2.5rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  background-color: colors.$Java;
+  position: relative;
+  @include media('>=phone', '<tablet') {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    padding: 1rem;
+  }
+}
+
+.main__container {
+  margin-left: 2rem !important;
+}
+
+.role__heading {
+  font-weight: 600;
+  color: colors.$white;
+}
+
+.role__button {
+  color: colors.$white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.3rem;
+}
+
+.text__belowButton {
+  color: rgb(227, 223, 223);
+  margin-top: 0.3rem;
+}
+
+.button {
+  margin-left: 3rem;
+  transition: background-color 1s;
+  @include media('>=phone', '<tablet') {
+    margin-left: 0;
+  }
+}
+.button :hover {
+  background-color: #004369;
+}
+
+.button:focus,
+.button:active {
+  transition: none;
+}
+
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #45d9b6;
+  left: 25.1px;
+  top: 25.1px;
+  border-radius: 17px 1px 50px 0px;
+  transform: translate(-50%, -50%);
+}
+
+.circle2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #45d9b6;
+  bottom: -25px;
+  right: -25px;
+  border-radius: 0px 50px 1px 17px;
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.checkBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5rem;
+  @include media('>=phone', '<tablet') {
+    gap: 2rem;
+  }
+}
+
+.check__boxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__check {
+  width: 91%;
+  margin-top: 1rem;
+  @include media('>=phone', '<=tablet') {
+    display: grid;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+
+.heading {
+  margin-top: 1rem;
+}
+
+.roles__name {
+  font-size: medium;
+  @include media('>=phone', '<tablet') {
+    margin-left: 0 !important;
+    font-size: small;
+  }
+}
+
+.checkAll {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+  @include media('>=phone', '<tablet') {
+    gap: 0.3rem;
+  }
+}
+
+.checkAll__checkBox {
+  display: flex;
+  width: '50%';
+  @include media('>=phone', '<=tablet') {
+    margin-left: -1.5rem;
+  }
+  @include media('>=phone', '<tablet') {
+    margin-left: -3.5rem;
+  }
+}
+
+.label__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkAll__heading {
+  @include media('>=phone', '<=tablet') {
+    inline-size: 150px;
+    overflow-wrap: break-word;
+  }
+}
+
+.checkAll__permission__heading {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2.5rem;
+  width: 50%;
+  margin-left: 2rem;
+  @include media('>=phone', '<=tablet') {
+    margin-left: 0;
+    gap: 1rem;
+  }
+}
+
+.chip {
+  padding: 0px 16px;
+  height: 25px;
+  line-height: 26px;
+  border-radius: 25px;
+  background-color: #004369;
+  font-size: 12px;
+  color: white;
+
+  @include media('>=phone', '<tablet') {
+    padding: 0px 6px;
+    height: 17px;
+    line-height: 19px;
+    border-radius: 25px;
+    background-color: #004369;
+    font-size: 8px;
+    color: white;
+    margin-left: 0rem;
+  }
+}
+.show__checkBoxexMobileView {
+  @include media('>=768px') {
+    display: none !important;
+  }
+}
+.checkBox__desktop {
+  @include media('>=320px', '<768px') {
+    display: none !important;
+  }
+}
+.table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.permission__header {
+  background-color: colors.$Tarawera;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0px 12px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 24px;
+  font-size: 10px;
+}
+
+.checkBox__container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  gap: 10px;
+  width: 95%;
+}
+
+.heading__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.permissions__checkboxes {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.edit_delete_icons {
+  display: flex;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  gap: 2.5rem;
+  margin-left: 2rem;
+  @include media('>=phone', '<tablet') {
+    justify-content: center;
+  }
+  @include media('<=phone') {
+    justify-content: center;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.delete_icon {
+  color: #e74c3c;
+}
+.delete_icon:hover {
+  color: red;
+}
+
+.edit__icon {
+  color: #aaaaaa;
+}
+
+.edit__icon :hover {
+  color: #000;
+}
+
+.permissionHeader__container {
+  display: flex;
+  justify-content: flex-end;
+  width: 98%;
+  gap: 1.2rem;
+}
+.modal__header {
+  color: colors.$lightGrey;
+}
+
+.modal__footer_title {
+  font-weight: 600;
+  color: colors.$Tarawera;
+}
+.table__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.table__container {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  background: #ffffff;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.search-input::-webkit-search-cancel-button {
+  /* Styles for the cross icon */
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}

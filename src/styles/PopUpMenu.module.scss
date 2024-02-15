@@ -1,0 +1,25 @@
+.transform {
+  transform: scale(0);
+  transform-origin: top left;
+  transition: transform 0.2s;
+
+  .shown {
+    transform: scale(1);
+  }
+}
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2vh 0 1vh 1vw;
+}
+.list__item {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 1vh 1vw 1vh 1vw;
+  cursor: pointer;
+}
+.list__item:hover {
+  background-color: rgb(216, 215, 215);
+}

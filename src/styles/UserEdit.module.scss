@@ -1,0 +1,92 @@
+@use '../assets/colors/colors.scss' as colors;
+@import '../../node_modules/include-media';
+
+.background {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.user__block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: colors.$white;
+}
+.user__text__color {
+  color: colors.$linkColor;
+}
+.grid__container {
+  margin-top: 2em;
+}
+.user__input__fields {
+  margin-top: 1rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.user__avatar {
+  margin-top: 1em;
+}
+
+.file__field {
+  margin-top: 0.5em;
+}
+.profile__background {
+  background-color: colors.$white;
+  padding: 0.7rem;
+  border-radius: 7px;
+  margin: 0rem 1rem 1rem 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.left__panel__items {
+  padding: 0.7rem;
+  border-radius: 7px;
+  margin: -1rem 1rem 1rem 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+.left__panel__items:hover {
+  color: colors.$linkColor;
+}
+
+.profile__background:hover {
+  color: colors.$linkColor;
+}
+
+.label__align {
+  margin-left: 0.5rem;
+}
+
+.button {
+  margin-top: 1rem;
+}
+
+.grid__left__panel {
+  @include media('>=phone', '<=tablet') {
+    display: none;
+  }
+}
+
+.grid__right__panel {
+  grid-column: 2/2;
+  @include media('<=desktop') {
+    width: 100%;
+  }
+}

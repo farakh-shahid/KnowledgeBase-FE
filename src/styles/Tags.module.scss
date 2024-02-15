@@ -1,0 +1,110 @@
+@use "../assets/colors/colors.scss" as colors;
+@import "../../node_modules/include-media";
+
+.input {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  width: 100%;
+  box-shadow: none;
+  resize: none;
+  transition: none;
+  min-height: 60px;
+  @include media(">=phone", "<=tablet") {
+    font-size: medium;
+  }
+  max-height: 60px;
+  font-size: large;
+}
+
+.input:focus {
+  border-color: colors.$cornflowerblue;
+  outline: none;
+}
+
+.input.has-error {
+  border-color: colors.$tomato;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.tag__item {
+  background-color: #d4d5d6;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 30px;
+  height: 30px;
+  padding: 0 4px 0 1rem;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0.3rem 0.3rem 0;
+  .button {
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    margin-left: 10px;
+    font-weight: bold;
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.error {
+  margin: 0;
+  font-size: 90%;
+  color: tomato;
+}
+.dd__wrapper {
+  height: 45vh;
+  z-index: 1000000;
+  background-color: white;
+  position: fixed;
+  align-self: flex-start;
+  top: 28vh;
+  border-radius: 5px;
+  border: 1px solid colors.$border;
+  overflow-y: scroll;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.2);
+  @include media(">=phone", "<=tablet") {
+    width: 90%;
+  }
+  @include media(">tablet", "<=1920px") {
+    width: 652px;
+    height: 470px;
+  }
+}
+.top__tags {
+  padding: 2vh 2vw 1vh 2vw;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+.top__tag__item {
+  width: 100%;
+  padding: 2vh 2vw 2vh 2vw;
+  cursor: pointer;
+}
+.top__tag__item:hover {
+  background-color: #d4d5d6;
+}

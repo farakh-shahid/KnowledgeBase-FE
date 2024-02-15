@@ -1,0 +1,209 @@
+@use '../assets/colors/colors.scss' as colors;
+@import '../../node_modules/include-media';
+
+.container__main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  height: 100px;
+  padding: 4rem;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 8px 0px;
+  margin-bottom: 2.5rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  background-color: colors.$Java;
+  position: relative;
+  @include media('>=phone', '<tablet') {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    padding: 1rem;
+  }
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  @include media('>=phone', '<tablet') {
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+  }
+}
+
+.container__heading {
+  color: colors.$white;
+  font-size: larger;
+}
+
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #45d9b6;
+  left: 25.1px;
+  top: 25.1px;
+  border-radius: 17px 1px 50px 0px;
+  transform: translate(-50%, -50%);
+}
+
+.circle2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #45d9b6;
+  bottom: -25px;
+  right: -25px;
+  border-radius: 0px 50px 1px 17px;
+  transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.user__table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chip {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 2px;
+  background-color: colors.$Java;
+  border-radius: 6px;
+  color: colors.$white;
+}
+.popover {
+  text-align: center;
+  color: colors.$Tarawera;
+}
+
+.role__chip {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-right: 8px;
+  background-color: #0c7075;
+  border-radius: 16px;
+  width: 120px; /* Set a fixed width for the chips */
+  text-align: center;
+  color: colors.$white;
+
+  // display: inline-block;
+  // padding: 4px 8px;
+  // margin: 2px;
+  // background-color: #0c7075;
+  // border-radius: 25px;
+  // color: colors.$white;
+}
+
+.edit_delete_icons {
+  display: flex;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  gap: 2.5rem;
+  margin-left: 2.3rem;
+  @include media('>=phone', '<tablet') {
+    justify-content: center;
+  }
+  @include media('<=phone') {
+    justify-content: center;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.delete_icon {
+  color: #e74c3c;
+}
+.delete_icon:hover {
+  color: red;
+}
+
+.edit__icon {
+  color: #aaaaaa;
+}
+
+.edit__icon :hover {
+  color: #000;
+}
+
+.table__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.popover__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+.popover__footer {
+  text-align: left;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.image__cell {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 6px;
+  margin-top: 0.35rem;
+  cursor: pointer;
+}
+
+.image__cell:hover {
+  color: colors.$Tarawera;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  background: #ffffff;
+  width: 100%;
+  padding: 4px 0;
+}
+
+
+.Table__inputFields {
+  position: relative;
+  margin-left: -0.09rem;
+}
+
+.InputField__wrapper {
+  display: flex;
+
+}
+
+.InputField__icon {
+  position: absolute;
+  top: 40%;
+  right: 8px;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.InputField__icon:hover {
+  color: colors.$red;
+}

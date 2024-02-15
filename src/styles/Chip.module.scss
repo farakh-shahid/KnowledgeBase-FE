@@ -1,0 +1,15 @@
+@use "../assets/colors/colors.scss" as colors;
+.chip {
+  min-height: 26px;
+  min-width: min-content;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: colors.$border;
+  cursor: pointer;
+}
+.chip:hover {
+  background-color: colors.$hover;
+}

@@ -1,0 +1,60 @@
+@use "../assets/colors/colors.scss" as colors;
+@import "../../node_modules/include-media";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: colors.$background;
+}
+.login__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  max-width: 1000px;
+  background-color: colors.$white;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 12px;
+  @include media("<=desktop") {
+    flex-direction: column;
+    box-shadow: none;
+  }
+}
+.form {
+  flex: 1 0 100%;
+  max-width: 480px;
+  width: 100%;
+  padding: 60px;
+  @include media("<=desktop") {
+    max-width: 100%;
+  }
+}
+.illustration__wrapper {
+  display: flex;
+  align-items: flex-end;
+  max-width: 800px;
+  min-height: 100%;
+  background-color: #fffdf2;
+  @include media("<=desktop") {
+    max-width: 100%;
+    min-height: auto;
+  }
+}
+.illustration__wrapper img {
+  display: block;
+  width: 100%;
+}
+.link {
+  text-decoration: none;
+}
+.logo {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}

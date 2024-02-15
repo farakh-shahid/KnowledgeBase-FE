@@ -1,0 +1,14 @@
+.line {
+  display: flex;
+  height: 1px;
+  width: 100%;
+  background-color: lightgray;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.text {
+  margin: 0px 10px;
+  color: gray;
+}
